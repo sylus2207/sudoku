@@ -116,7 +116,7 @@ class AlertAbout extends StatelessWidget {
               InkWell(
                 onTap: () => openURL(authorURL),
                 child: Text(
-                  'VarunS2002',
+                  'Rachel Mark',
                   style: TextStyle(
                       color: Styles.primaryColor,
                       fontFamily: 'roboto',
