@@ -5,13 +5,13 @@ import '../main.dart';
 import '../styles.dart';
 
 class AlertAbout extends StatelessWidget {
-  static const String authorURL = "https://www.github.com/VarunS2002/";
+  static const String authorURL = "https://github.com/rachelmark46/sudoku/tree/releaseV1.0.0";
   static const String releasesURL =
-      "https://github.com/VarunS2002/Flutter-Sudoku/releases/";
+      "https://github.com/rachelmark46/sudoku/releases/";
   static const String sourceURL =
-      "https://github.com/VarunS2002/Flutter-Sudoku/";
+      "https://github.com/rachelmark46/sudoku/releases";
   static const String licenseURL =
-      "https://github.com/VarunS2002/Flutter-Sudoku/blob/master/LICENSE";
+      "https://github.com/rachelmark46/sudoku/blob/releaseV1.0.0/LICENSE";
 
   const AlertAbout({Key? key}) : super(key: key);
 
@@ -38,8 +38,8 @@ class AlertAbout extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/icon/icon_round.png',
-                  height: 48.0, width: 48.0, fit: BoxFit.contain),
+             // Image.asset('assets/icon/icon_round.png',
+               //   height: 48.0, width: 48.0, fit: BoxFit.contain),
               Text(
                 '   Sudoku',
                 style: TextStyle(

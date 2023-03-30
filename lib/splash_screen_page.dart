@@ -29,7 +29,7 @@ class SplashScreenPageState extends State<SplashScreenPage> {
             fontSize: 25.0,
             color: Styles.foregroundColor),
       ),
-      //image: Image.asset('assets/icon/icon_foreground.png'),
+      image: Image.asset('assets/icon/icon_foreground.png'),
       photoSize: 50,
       backgroundColor: Styles.primaryBackgroundColor,
       useLoader: true,
