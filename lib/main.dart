@@ -9,7 +9,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sudoku_solver_generator/sudoku_solver_generator.dart';
 
 
-
 import 'alerts/all.dart';
 import 'board_style.dart';
 import 'splash_screen_page.dart';
