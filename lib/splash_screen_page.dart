@@ -20,7 +20,7 @@ class SplashScreenPageState extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 2,
+      seconds: 10,
       navigateAfterSeconds: const HomePage(),
       title: Text(
         '\nSudoku',
@@ -29,7 +29,7 @@ class SplashScreenPageState extends State<SplashScreenPage> {
             fontSize: 25.0,
             color: Styles.foregroundColor),
       ),
-      image: Image.asset('assets/icon/icon_foreground.png'),
+      image: Image.asset('assets/icon/PuzzelPixelStudioLaunch.png'),
       photoSize: 50,
       backgroundColor: Styles.primaryBackgroundColor,
       useLoader: true,

@@ -581,6 +581,8 @@ class HomePageState extends State<HomePage> {
             body: Builder(builder: (builder) {
               return Center(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,

@@ -57,6 +57,7 @@ dependencies:
   # Windows Title Bar
   bitsdojo_window: ^0.1.2
 dev_dependencies:
+  flutter_launcher_icons: "^0.13.1"
   flutter_test:
     sdk: flutter
 
@@ -84,6 +85,13 @@ flutter:
   assets:
     - assets/icon/icon_foreground.png
     - assets/icon/icon_round.png
+    - assets/icon/PuzzelPixelStudioLaunch.png
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon_square.png"
+  min_sdk_android: 16 # android min sdk min:16, default 21
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
