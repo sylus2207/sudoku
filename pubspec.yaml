@@ -56,8 +56,9 @@ dependencies:
 
   # Windows Title Bar
   bitsdojo_window: ^0.1.2
+  flutter_donation_buttons: ^0.4.8
 dev_dependencies:
-  flutter_launcher_icons: "^0.13.1"
+  flutter_launcher_icons: "^0.9.1"
   flutter_test:
     sdk: flutter
 

@@ -20,7 +20,7 @@ class SplashScreenPageState extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 2,
+      seconds: 1,
       navigateAfterSeconds: const HomePage(),
       title: Text(
         '\nSudoku',

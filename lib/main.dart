@@ -8,6 +8,8 @@ import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sudoku_solver_generator/sudoku_solver_generator.dart';
 
+import 'package:flutter_donation_buttons/donationButtons/githubSponsorButton.dart';
+import 'package:flutter_donation_buttons/flutter_donation_buttons.dart';
 
 import 'alerts/all.dart';
 import 'board_style.dart';
@@ -579,15 +581,37 @@ class HomePageState extends State<HomePage> {
                       )),
             body: Builder(builder: (builder) {
               return Center(
-                child: Row(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[ /*KofiButton(
+                    kofiName: "flajt",
+                    kofiColor: KofiColor.Red,
+                    onDonation: () {
+                      // Runs after the button has been pressed
+                      debugPrint("On donation");
+                    },
+                  ),
+                    const PayPalButton(paypalButtonId: "T6NT2YYTVX6VS"),
+                    const PatreonButton(
+                        patreonName:
+                        "buttonshy"), // Just someone I stumbled across on Patreon as an example, not affiliated with him
+                   */ const BuyMeACoffeeButton(
+                    buyMeACoffeeName: "rachelmark",
+                    color: BuyMeACoffeeColor.Green,
+                    //Allows custom styling
+
+
+                  ),const SizedBox(width: 10,height: 10,),Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: createRows(),
                 )],
-              ));
+              )]));
             }),
             floatingActionButton: FloatingActionButton(
               foregroundColor: Styles.primaryBackgroundColor,
