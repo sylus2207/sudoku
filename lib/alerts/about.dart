@@ -5,7 +5,7 @@ import '../main.dart';
 import '../styles.dart';
 
 class AlertAbout extends StatelessWidget {
-  static const String authorURL = "https://github.com/rachelmark46/sudoku/tree/releaseV1.0.0";
+  static const String authorURL = "https://www.ppixel.org";
   static const String releasesURL =
       "https://github.com/rachelmark46/sudoku/releases/";
   static const String sourceURL =
@@ -41,7 +41,7 @@ class AlertAbout extends StatelessWidget {
              // Image.asset('assets/icon/icon_round.png',
                //   height: 48.0, width: 48.0, fit: BoxFit.contain),
               Text(
-                '   Sudoku',
+                'www.ppixel.org',
                 style: TextStyle(
                     color: Styles.foregroundColor,
                     fontFamily: 'roboto',
@@ -107,7 +107,7 @@ class AlertAbout extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Author: ',
+                'Website: ',
                 style: TextStyle(
                     color: Styles.foregroundColor,
                     fontFamily: 'roboto',
@@ -116,7 +116,7 @@ class AlertAbout extends StatelessWidget {
               InkWell(
                 onTap: () => openURL(authorURL),
                 child: Text(
-                  'Rachel Mark',
+                  'Puzzle Pixel Studio',
                   style: TextStyle(
                       color: Styles.primaryColor,
                       fontFamily: 'roboto',

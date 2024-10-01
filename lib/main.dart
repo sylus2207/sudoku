@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sudoku_solver_generator/sudoku_solver_generator.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_donation_buttons/donationButtons/githubSponsorButton.dart';
 import 'package:flutter_donation_buttons/flutter_donation_buttons.dart';
@@ -62,6 +63,10 @@ class HomePageState extends State<HomePage> {
   static String? currentDifficultyLevel;
   static String? currentTheme;
   static String? currentAccentColor;
+
+  openURL(String url) async {
+    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+  }
 
 
   static String platform = () {
@@ -597,6 +602,7 @@ class HomePageState extends State<HomePage> {
                         patreonName:
                         "buttonshy"), // Just someone I stumbled across on Patreon as an example, not affiliated with him
                    */ const BuyMeACoffeeButton(
+                    text: "Support Us!",
                     buyMeACoffeeName: "rachelmark",
                     color: BuyMeACoffeeColor.Green,
                     //Allows custom styling
@@ -610,8 +616,68 @@ class HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: createRows(),
-                )],
-              )]));
+                ),],
+
+              ), const SizedBox(height: 40),Row(
+
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [InkWell(
+                        onTap: () => openURL("https://www.ppixel.org/"),
+                        //child: const Text("About Us"),
+                        child: Container(
+                          height:20,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.yellowAccent,
+                            ),
+                            color: Colors.greenAccent,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Website',
+                              selectionColor: Colors.black,
+                              style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline)),
+                          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        ),
+                      ),
+                        const SizedBox(width: 10),
+                        InkWell(
+                          onTap: () => openURL("https://play.google.com/store/apps/developer?id=Puzzle+Pixel+Studio"),
+                          //child: const Text("About Us"),
+                          child: Container(
+                            height:20,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.yellowAccent,
+                              ),
+                              color: Colors.greenAccent,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            alignment: Alignment.center,
+                            child: Text('Other Apps',selectionColor: Colors.black,
+                                style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline)),
+                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          ),
+                        ),const SizedBox(width: 10),
+                        InkWell(
+                          onTap: () => openURL("https://www.ppixel.org/digital-ai-products"),
+                          //child: const Text("About Us"),
+                          child: Container(
+                            height:20,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.greenAccent,
+                              ),
+                              color: Colors.greenAccent,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            alignment: Alignment.center,
+                            child: Text('Others',selectionColor: Colors.black,
+                                style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline)),
+                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          ),
+                        ),
+                      ]),]));
             }),
             floatingActionButton: FloatingActionButton(
               foregroundColor: Styles.primaryBackgroundColor,
